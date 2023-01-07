@@ -20,9 +20,9 @@ def funcao_01(area, rooms, bathroom, parking_spaces, floor, animal, furniture, h
     ]
 
     try:
-        previsao = modelo.predict(lista)
+        previsao = modelo.predict([lista])
 
-        return {'Valor_aluguel': 'previsao'}
+        return {'Valor_aluguel': str(previsao)}
 
     except:
         return {'Aviso': 'Deu algum error!'}
